@@ -1,4 +1,4 @@
-// swift-tools-version:4.1
+// swift-tools-version:5.3
 //
 //  Package.swift
 //  PerfectHTTP
@@ -27,9 +27,9 @@ let package = Package(
 		.library(name: "PerfectHTTP", targets: ["PerfectHTTP"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/PerfectlySoft/PerfectLib.git", from: "3.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-Net.git", from: "3.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-LinuxBridge.git", from: "3.0.0")
+		.package(url: "https://github.com/PerfectlySoft/PerfectLib.git", from: "4.0.0"),
+		.package(name: "PerfectNet", url: "https://github.com/zeionara/Perfect-Net.git", .branch("master")),
+		.package(name: "LinuxBridge", url: "https://github.com/PerfectlySoft/Perfect-LinuxBridge.git", from: "3.0.0")
 	],
  	targets: [
 		.target(name: "PerfectHTTP", dependencies: ["PerfectLib", "PerfectNet", "LinuxBridge"]),
